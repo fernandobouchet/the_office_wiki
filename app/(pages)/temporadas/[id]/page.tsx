@@ -11,7 +11,7 @@ interface Props {
 const Page = async ({ params }: Props) => {
   const data: Season = await getSeasonsById(params.id.toString());
   return (
-    <section className="main-section xl:max-w-screen-xl">
+    <section className="main-section xl:max-w-(--breakpoint-xl)">
       <div className="pt-4 pb-8 text-center">
         <h1 className="text-3xl font-bold mb-6">Temporada {params.id}</h1>
         <p>{data.overview}</p>

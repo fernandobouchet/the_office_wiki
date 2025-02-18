@@ -6,7 +6,7 @@ const Page = async () => {
   const data = await getRecommendations();
 
   return (
-    <section className="main-section xl:max-w-screen-xl">
+    <section className="main-section xl:max-w-(--breakpoint-xl)">
       <h1 className="text-3xl font-bold pt-4 pb-8 text-center">
         Recomendaciones de series similares
       </h1>
