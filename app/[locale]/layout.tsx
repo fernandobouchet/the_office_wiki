@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "../components/navbar";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import Navbar from "../../components/navbar";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "next-themes";
 
@@ -22,13 +26,22 @@ export const metadata: Metadata = {
     "Aplicación tipo 'wiki' con información de la serie de televisión 'The Office'.",
 };
 
-export default function RootLayout({
+export default async function RootLayou({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+  const messages = await getMessages();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -38,9 +51,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <NextIntlClientProvider messages={messages}>
+            <Navbar />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

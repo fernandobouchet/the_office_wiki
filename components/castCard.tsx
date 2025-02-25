@@ -1,7 +1,7 @@
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { Cast } from "@/types";
 import ImageCastCardLoader from "./imageCastCardLoader";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 interface Props {
   cast: Cast;

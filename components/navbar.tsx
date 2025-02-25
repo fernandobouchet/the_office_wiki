@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import NavItem from "./navItem";
 import MovileNav from "./mobileNav";
 import ThemeToggle from "./themeToggle";

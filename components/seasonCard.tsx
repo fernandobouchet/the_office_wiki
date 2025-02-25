@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Season } from "@/types";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import VoteAverageBar from "./voteAverageBar";
 import ImageCardLoader from "./imageCardLoader";
 
