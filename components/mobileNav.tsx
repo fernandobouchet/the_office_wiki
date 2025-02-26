@@ -1,4 +1,5 @@
 "use client";
+import LanguageToggle from "./languageToggle";
 import NavItem from "./navItem";
 import ThemeToggle from "./themeToggle";
 import { Button } from "./ui/button";
@@ -44,7 +45,10 @@ const MobileNav = () => {
             Recomendaciones
           </NavItem>
         </nav>
-        <ThemeToggle className="mt-auto ml-auto" />
+        <div className="absolute bottom-0 flex right-0">
+          <ThemeToggle />
+          <LanguageToggle />
+        </div>
       </SheetContent>
     </Sheet>
   );
