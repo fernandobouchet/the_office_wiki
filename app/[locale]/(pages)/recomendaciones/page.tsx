@@ -1,9 +1,12 @@
 import SerieCard from "@/components/serieCard";
 import getRecommendations from "@/lib/getRecommendations";
 import { Series } from "@/types";
+import { getLocale } from "next-intl/server";
 
 const Page = async () => {
-  const data = await getRecommendations();
+  const locale = await getLocale();
+
+  const data = await getRecommendations({ language: locale });
 
   return (
     <section className="main-section xl:max-w-(--breakpoint-xl)">
