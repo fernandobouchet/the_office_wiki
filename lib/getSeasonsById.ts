@@ -1,7 +1,11 @@
-const getSeasonsById = async (seasonId: string) => {
+interface Props {
+  seasonId: string;
+  language?: string;
+}
+const getSeasonsById = async ({ seasonId, language = "en" }: Props) => {
   try {
     const searchParams = new URLSearchParams({
-      language: "es",
+      language: language,
       api_key: process.env.API_KEY as string,
     });
     const response = await fetch(

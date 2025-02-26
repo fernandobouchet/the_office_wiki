@@ -1,9 +1,12 @@
 import SeasonCard from "@/components/seasonCard";
 import getSeriesData from "@/lib/getSeriesData";
 import { Seasons } from "@/types";
+import { getLocale } from "next-intl/server";
 
 const Page = async () => {
-  const data: Seasons = await getSeriesData();
+  const locale = await getLocale();
+
+  const data: Seasons = await getSeriesData({ language: locale });
   return (
     <section className="main-section xl:max-w-(--breakpoint-xl)">
       <h1 className="text-3xl font-bold pt-4 pb-8 text-center">

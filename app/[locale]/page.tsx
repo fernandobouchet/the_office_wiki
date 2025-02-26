@@ -1,10 +1,13 @@
 import StatisticCards from "@/components/statisticCards";
 import getSeriesData from "@/lib/getSeriesData";
 import { Series } from "@/types";
+import { getLocale } from "next-intl/server";
 import Image from "next/image";
 
 export default async function Home() {
-  const data: Series = await getSeriesData();
+  const locale = await getLocale();
+
+  const data: Series = await getSeriesData({ language: locale });
   return (
     <section className="main-section">
       <h1 className="text-3xl font-bold pt-4 pb-8 text-center">

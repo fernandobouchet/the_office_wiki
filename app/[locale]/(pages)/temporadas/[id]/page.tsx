@@ -1,6 +1,7 @@
 import EpisodeCard from "@/components/episodeCard";
 import getSeasonsById from "@/lib/getSeasonsById";
 import { Season } from "@/types";
+import { getLocale } from "next-intl/server";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -8,7 +9,11 @@ interface Props {
 
 const Page = async ({ params }: Props) => {
   const { id } = await params;
-  const data: Season = await getSeasonsById(id.toString());
+  const locale = await getLocale();
+  const data: Season = await getSeasonsById({
+    seasonId: id.toString(),
+    language: locale,
+  });
   return (
     <section className="main-section xl:max-w-(--breakpoint-xl)">
       <div className="pt-4 pb-8 text-center">

@@ -1,7 +1,10 @@
-const getRecommendations = async () => {
+interface Props {
+  language?: string;
+}
+const getRecommendations = async ({ language = "en" }: Props) => {
   try {
     const searchParams = new URLSearchParams({
-      language: "es",
+      language: language,
       api_key: process.env.API_KEY as string,
     });
     const response = await fetch(

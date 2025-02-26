@@ -1,9 +1,12 @@
 import CastCard from "@/components/castCard";
 import getTopCast from "@/lib/getTopCast";
 import { Cast } from "@/types";
+import { getLocale } from "next-intl/server";
 
 const Page = async () => {
-  const data: Cast[] = await getTopCast();
+  const locale = await getLocale();
+
+  const data: Cast[] = await getTopCast({ language: locale });
   return (
     <section className="main-section">
       <h1 className="text-3xl font-bold pt-4 pb-8 text-center">
