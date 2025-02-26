@@ -16,13 +16,13 @@ const LanguageToggle = ({ ...props }: Props) => {
   };
   return (
     <Button
+      {...props}
       variant="ghost"
       size="icon"
-      className="rounded-full"
+      className="rounded-full cursor-pointer"
       onClick={() => handleLanguageChange(locale === "es" ? "en" : "es")}
-      {...props}
     >
-      <span className="h-[1.2rem] w-[1.2rem]">
+      <span className="h-[1.2rem] w-[1.2rem] font-black">
         {locale === "es" ? "EN" : "ES"}
       </span>
     </Button>

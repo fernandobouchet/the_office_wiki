@@ -20,9 +20,9 @@ const Navbar = () => {
             <NavItem href="/personajes">Personajes</NavItem>
             <NavItem href="/recomendaciones">Recomendaciones</NavItem>
           </div>
-          <div className="flex items-center">
-            <ThemeToggle className="hidden md:inline-flex self-center" />
-            <LanguageToggle className="hidden md:inline-flex self-center" />
+          <div className=" hidden md:inline-flex self-center items-center align-middle">
+            <ThemeToggle />
+            <LanguageToggle />
           </div>
           <div className="md:hidden flex items-center">
             <MovileNav />
