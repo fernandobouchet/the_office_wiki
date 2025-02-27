@@ -13,7 +13,7 @@ This web application, developed with [Next.js](https://nextjs.org/), [Typescript
 
 4. **Responsive Design**: The web app is fully responsive, providing an optimized experience across desktop, tablet, and mobile devices.
 
-
+![App Screenshot](https://raw.githubusercontent.com/fernandobouchet/the_office_wiki/refs/heads/main/preview.webp)
 
 ## Demo
 
