@@ -1,3 +1,4 @@
+"use client";
 import { Series } from "@/types";
 import {
   Card,
@@ -10,12 +11,15 @@ import {
 import VoteAverageBar from "./voteAverageBar";
 import ImageCardLoader from "./imageCardLoader";
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 interface Props {
   serie: Series;
 }
 
 const SerieCard = ({ serie }: Props) => {
+  const t = useTranslations("Shared");
+
   return (
     <Link
       href={`https://www.themoviedb.org/tv/${serie.id}?language=es-ES`}
@@ -35,7 +39,7 @@ const SerieCard = ({ serie }: Props) => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <span className="text-sm text-gray-400">Valoración:</span>
+          <span className="text-sm text-gray-400">{t(`Rating`)}:</span>
           <VoteAverageBar voteAverage={serie.vote_average} />
         </CardContent>
         <CardFooter>

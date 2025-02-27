@@ -1,6 +1,6 @@
 "use client";
 import LanguageToggle from "./languageToggle";
-import NavItem from "./navItem";
+import NavItemsContainer from "./navItemsContainer";
 import ThemeToggle from "./themeToggle";
 import { Button } from "./ui/button";
 import {
@@ -31,20 +31,7 @@ const MobileNav = () => {
           <SheetTitle hidden>Menú</SheetTitle>
           <SheetDescription hidden />
         </SheetHeader>
-        <nav className="flex flex-col h-max space-y-4 mt-8 font-bold">
-          <NavItem href="/" onClick={toggleMenu}>
-            Inicio
-          </NavItem>
-          <NavItem href="/temporadas" onClick={toggleMenu}>
-            Temporadas
-          </NavItem>
-          <NavItem href="/personajes" onClick={toggleMenu}>
-            Personajes
-          </NavItem>
-          <NavItem href="/recomendaciones" onClick={toggleMenu}>
-            Recomendaciones
-          </NavItem>
-        </nav>
+        <NavItemsContainer onToggle={toggleMenu} />
         <div className="absolute bottom-0 flex right-0">
           <ThemeToggle />
           <LanguageToggle />

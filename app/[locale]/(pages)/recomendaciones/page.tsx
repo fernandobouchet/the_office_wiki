@@ -1,18 +1,18 @@
 import SerieCard from "@/components/serieCard";
 import getRecommendations from "@/lib/getRecommendations";
 import { Series } from "@/types";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 const Page = async () => {
   const locale = await getLocale();
 
   const data = await getRecommendations({ language: locale });
 
+  const t = await getTranslations("RecommendationsPage");
+
   return (
     <section className="main-section xl:max-w-(--breakpoint-xl)">
-      <h1 className="text-3xl font-bold pt-4 pb-8 text-center">
-        Recomendaciones de series similares
-      </h1>
+      <h1 className="text-3xl font-bold pt-4 pb-8 text-center">{t(`title`)}</h1>
       <div className="flex flex-col items-center sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:items-stretch">
         {data.map((serie: Series) => (
           <SerieCard key={serie.id} serie={serie} />

@@ -1,6 +1,39 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "ErrorPage": {
+    "h1": "¡Ups! Something went wrong.",
+    "p": "We are sorry, but an error occurred while processing your request.",
+    "button": "Try again"
+  },
+  "LoadingPage": {
+    "h1": "Loading...",
+    "p": "Please wait while we get the content."
+  },
+  "NotFoundPage": {
+    "h1": "Page not found",
+    "p": "Sorry, we couldn't find the page you are looking for.",
+    "button": "Go to the main page"
+  },
+  "StatisticsCards": {
+    "seasons": "Seasons",
+    "episodes": "Episodes",
+    "onBroadcast": "On broadcast",
+    "qualification": "Qualification"
+  },
+  "NavItems": {
+    "home": "Home",
+    "seasons": "Seasons",
+    "cast": "Cast",
+    "recommendations": "Recommendations"
+  },
+  "CastPage": {
+    "title": "Main characters"
+  },
+  "RecommendationsPage": { "title": "Recommendations for similar series" },
+  "Shared": {
+    "SeasonsOf": "Seasons of",
+    "Season": "Season",
+    "Rating": "Rating",
+    "episodes": "episodes",
+    "moreInfo": "More info"
   }
 }

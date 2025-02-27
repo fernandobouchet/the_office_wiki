@@ -1,8 +1,8 @@
 import { Link } from "@/i18n/routing";
-import NavItem from "./navItem";
 import MovileNav from "./mobileNav";
 import ThemeToggle from "./themeToggle";
 import LanguageToggle from "./languageToggle";
+import NavItemsContainer from "./navItemsContainer";
 
 const Navbar = () => {
   return (
@@ -14,13 +14,10 @@ const Navbar = () => {
               <h1 className="font-bold text-xl lg:text-3xl">The Office</h1>
             </Link>
           </div>
-          <div className="hidden md:flex items-center space-x-8 font-bold">
-            <NavItem href="/">Inicio</NavItem>
-            <NavItem href="/temporadas">Temporadas</NavItem>
-            <NavItem href="/personajes">Personajes</NavItem>
-            <NavItem href="/recomendaciones">Recomendaciones</NavItem>
+          <div className="hidden md:flex items-center ">
+            <NavItemsContainer />
           </div>
-          <div className=" hidden md:inline-flex self-center items-center align-middle">
+          <div className="hidden md:flex items-center ">
             <ThemeToggle />
             <LanguageToggle />
           </div>

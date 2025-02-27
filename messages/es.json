@@ -1,6 +1,39 @@
 {
-  "HomePage": {
-    "title": "Hola mundo!",
-    "about": "Ir al pagina acerca de"
+  "ErrorPage": {
+    "h1": "¡Ups! Algo salió mal.",
+    "p": "Lo sentimos, pero ocurrió un error al procesar su solicitud.",
+    "button": "Intentar de nuevo"
+  },
+  "LoadingPage": {
+    "h1": "Cargando...",
+    "p": "Por favor, espere mientras obtenemos el contenido."
+  },
+  "NotFoundPage": {
+    "h1": "Página no encontrada",
+    "p": "Lo sentimos, no pudimos encontrar la página que estás buscando.",
+    "button": "Ir a la página principal"
+  },
+  "StatisticsCards": {
+    "seasons": "Temporadas",
+    "episodes": "Episodios",
+    "onBroadcast": "En emisión",
+    "qualification": "Calificación"
+  },
+  "NavItems": {
+    "home": "Inicio",
+    "seasons": "Temporadas",
+    "cast": "Reparto",
+    "recommendations": "Recomendaciones"
+  },
+  "CastPage": {
+    "title": "Personajes principales"
+  },
+  "RecommendationsPage": { "title": "Recomendaciones de series similares" },
+  "Shared": {
+    "SeasonsOf": "Temporadas de",
+    "Season": "Temporada",
+    "Rating": "Calificación",
+    "episodes": "episodios",
+    "moreInfo": "Más información"
   }
 }
